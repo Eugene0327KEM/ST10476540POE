@@ -1,29 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>SERVICES</title>
-        <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover comprehensive logistics solutions from Nare Logistics including air, sea, and ground freight services for domestic and international shipping.">
+    <meta name="keywords" content="logistics services, freight shipping, supply chain solutions, cargo transportation, Nare Logistics services">
+    <meta name="author" content="Nare Logistics">
+    <title>Our Services | Nare Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="preload" href="javascript/script.js" as="script">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="Images/logistics-3125136_640.jpg" alt="Nare Logistics Logo" width="150" height="50">
+        </div>
+        <button class="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contactus.html"><i class="fas fa-envelope"></i> Contact Us</a>
+            <a href="services.html" aria-current="page"><i class="fas fa-truck"></i> Services</a>
+            <a href="enquiry.html"><i class="fas fa-question-circle"></i> Enquiry</a>
+        </nav>
+    </div>
 
-    </head>
-    <body>
+    <div class="services-hero">
+        <div class="hero-content">
+            <h1>Our Logistics Services</h1>
+            <p>Comprehensive solutions tailored to your business needs</p>
+        </div>
+    </div>
 
-        <div class="navbar">
-            <div class="logo">
-              <img src="Images/logistics-3125136_640.jpg" alt="Nare Logistics Logo">
+    <div class="services-container">
+        <div class="services-intro">
+            <h2>Your Trusted Logistics Partner</h2>
+            <p>NARE LOGISTICS offers a full range of logistics and supply chain services to help your business move goods efficiently and reliably. We provide domestic and international shipping solutions including air, sea and ground freight tailored to your specific requirements.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card" id="air-freight">
+                <div class="service-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Air Freight</h3>
+                <p>Fast and reliable air cargo solutions for time-sensitive shipments with real-time tracking and customs clearance.</p>
+                <ul class="service-features">
+                    <li>Express air freight</li>
+                    <li>Charter services</li>
+                    <li>Dangerous goods handling</li>
+                    <li>Temperature-controlled</li>
+                </ul>
+                <button class="learn-more-btn" data-service="air-freight">Learn More</button>
             </div>
-            <nav>
-              <a href="index.html">Home</a>
-              <a href="aboutus.html">About Us</a>
-              <a href="contactus.html">Contact Us</a>
-              <a href="services.html">Services</a>
-              <a href="enquiry.html">Enquiry</a>
-            </nav>
-          </div>
-          
-        <p>NARE LOGISTICS offers a full range of logistics and supply chain serices to help your business move goods efficiently and reliably.
-            We also provide domestic and international shipping solutions this includes air, sea and ground freight tailored to your needs
 
-        </p>
+            <div class="service-card" id="sea-freight">
+                <div class="service-icon">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <h3>Sea Freight</h3>
+                <p>Cost-effective ocean freight solutions with flexible options for all container types and bulk shipments.</p>
+                <ul class="service-features">
+                    <li>FCL & LCL shipments</li>
+                    <li>Port-to-port</li>
+                    <li>Door-to-door</li>
+                    <li>Project cargo</li>
+                </ul>
+                <button class="learn-more-btn" data-service="sea-freight">Learn More</button>
+            </div>
 
-    </body>
+            <div class="service-card" id="ground-transport">
+                <div class="service-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Ground Transport</h3>
+                <p>Efficient road transportation network with specialized vehicles for all your domestic logistics needs.</p>
+                <ul class="service-features">
+                    <li>Full truckload</li>
+                    <li>Less-than-truckload</li>
+                    <li>Intermodal solutions</li>
+                    <li>Dedicated fleets</li>
+                </ul>
+                <button class="learn-more-btn" data-service="ground-transport">Learn More</button>
+            </div>
+
+            <div class="service-card" id="warehousing">
+                <div class="service-icon">
+                    <i class="fas fa-warehouse"></i>
+                </div>
+                <h3>Warehousing</h3>
+                <p>Secure storage solutions with inventory management and value-added services to optimize your supply chain.</p>
+                <ul class="service-features">
+                    <li>Bonded warehousing</li>
+                    <li>Pick & pack</li>
+                    <li>Cross-docking</li>
+                    <li>Inventory control</li>
+                </ul>
+                <button class="learn-more-btn" data-service="warehousing">Learn More</button>
+            </div>
+
+            <div class="service-card" id="supply-chain">
+                <div class="service-icon">
+                    <i class="fas fa-boxes"></i>
+                </div>
+                <h3>Supply Chain</h3>
+                <p>End-to-end supply chain management with customized solutions to streamline your operations.</p>
+                <ul class="service-features">
+                    <li>Order fulfillment</li>
+                    <li>Vendor management</li>
+                    <li>Just-in-time</li>
+                    <li>Reverse logistics</li>
+                </ul>
+                <button class="learn-more-btn" data-service="supply-chain">Learn More</button>
+            </div>
+
+            <div class="service-card" id="customs-clearance">
+                <div class="service-icon">
+                    <i class="fas fa-globe-africa"></i>
+                </div>
+                <h3>Customs Clearance</h3>
+                <p>Expert customs brokerage services to ensure smooth cross-border movement of your goods.</p>
+                <ul class="service-features">
+                    <li>Import/export clearance</li>
+                    <li>Duty optimization</li>
+                    <li>Trade compliance</li>
+                    <li>Documentation</li>
+                </ul>
+                <button class="learn-more-btn" data-service="customs-clearance">Learn More</button>
+            </div>
+        </div>
+
+        <div class="service-details" id="service-details">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>Ready to Optimize Your Logistics?</h2>
+        <p>Contact us today to discuss customized solutions for your business</p>
+        <a href="enquiry.html" class="cta-button">Get a Free Quote</a>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#air-freight">Air Freight</a></li>
+                    <li><a href="#sea-freight">Sea Freight</a></li>
+                    <li><a href="#ground-transport">Ground Transport</a></li>
+                    <li><a href="#warehousing">Warehousing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Logistics Park, Johannesburg</p>
+                <p><i class="fas fa-phone"></i> 071 905 1805</p>
+                <p><i class="fas fa-envelope"></i> info@narelogistics.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Nare Logistics. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/narelogistics" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/narelogistics" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/narelogistics" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/narelogistics" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js" defer></script>
+</body>
 </html>

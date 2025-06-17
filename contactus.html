@@ -1,31 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>SERVICES</title>
-        <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Nare Logistics for all your shipping and transportation needs. Reach out via phone, email, or our contact form.">
+    <meta name="keywords" content="logistics contact, shipping company, freight services, transportation contact, Nare Logistics phone number">
+    <meta name="author" content="Nare Logistics">
+    <title>Contact Us | Nare Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="preload" href="javascript/script.js" as="script">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="Images/logistics-3125136_640.jpg" alt="Nare Logistics Logo" width="150" height="50">
+        </div>
+        <button class="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contactus.html" aria-current="page"><i class="fas fa-envelope"></i> Contact Us</a>
+            <a href="services.html"><i class="fas fa-truck"></i> Services</a>
+            <a href="enquiry.html"><i class="fas fa-question-circle"></i> Enquiry</a>
+        </nav>
+    </div>
 
-    </head>
-    <body>
-        
-        <div class="navbar">
-            <div class="logo">
-              <img src="Images/logistics-3125136_640.jpg" alt="Nare Logistics Logo">
+    <div class="contact-container fade-in">
+        <div class="contact-header">
+            <h1>Contact Nare Logistics</h1>
+            <p>We're here to help with all your logistics needs. Reach out to us through any of the methods below.</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p>Primary: <a href="tel:+27719051805">071 905 1805</a></p>
+                    <p>Secondary: <a href="tel:+27723256591">072 325 6591</a></p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:info@narelogistics.com">info@narelogistics.com</a></p>
+                    <p><a href="mailto:support@narelogistics.com">support@narelogistics.com</a></p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>123 Logistics Park</p>
+                    <p>Johannesburg, 2000</p>
+                    <p>South Africa</p>
+                </div>
+
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Business Hours</h3>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
             </div>
-            <nav>
-              <a href="index.html">Home</a>
-              <a href="aboutus.html">About Us</a>
-              <a href="contactus.html">Contact Us</a>
-              <a href="services.html">Services</a>
-              <a href="enquiry.html">Enquiry</a>
-            </nav>
-          </div>
-          
-        
-        
-        <p>Phone:0719051805 <br> Email:@NareLogistics <br>Tel:0723256591 </p>
-        
 
-        
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form" action="/submit_contact" method="post" novalidate>
+                    <div class="form-group">
+                        <label for="contact-name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="contact-name" name="name" required placeholder="Your full name">
+                        <div class="error-message" id="name-error"></div>
+                    </div>
 
-    </body>
+                    <div class="form-group">
+                        <label for="contact-email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="contact-email" name="email" required placeholder="Your email address">
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-phone">Phone Number</label>
+                        <input type="tel" id="contact-phone" name="phone" placeholder="Your phone number">
+                        <div class="error-message" id="phone-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-subject">Subject <span class="required">*</span></label>
+                        <select id="contact-subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="quote">Request a Quote</option>
+                            <option value="support">Customer Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="subject-error"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-message">Message <span class="required">*</span></label>
+                        <textarea id="contact-message" name="message" required placeholder="Your message"></textarea>
+                        <div class="error-message" id="message-error"></div>
+                        <div class="char-counter">0/500</div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </div>
+                </form>
+
+                <div id="contact-success" class="success-message">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We'll get back to you soon.</p>
+                    <button class="close-success">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.279567393518!2d28.03492731502862!3d-26.19372298344422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1e1e0d2e3b%3A0x5b3b5e5b5e5b5e5b!2sJohannesburg!5e0!3m2!1sen!2sza!4v1620000000000!5m2!1sen!2sza" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                title="Nare Logistics Location">
+        </iframe>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html#air-freight">Air Freight</a></li>
+                    <li><a href="services.html#sea-freight">Sea Freight</a></li>
+                    <li><a href="services.html#ground-transport">Ground Transport</a></li>
+                    <li><a href="services.html#warehousing">Warehousing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Logistics Park, Johannesburg</p>
+                <p><i class="fas fa-phone"></i> 071 905 1805</p>
+                <p><i class="fas fa-envelope"></i> info@narelogistics.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Nare Logistics. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/narelogistics" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/narelogistics" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/narelogistics" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/narelogistics" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js" defer></script>
+</body>
 </html>

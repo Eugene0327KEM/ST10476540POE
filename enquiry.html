@@ -3,53 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <meta name="description" content="Submit your logistics enquiry to Nare Logistics. We'll respond promptly with solutions for your shipping, storage, and transportation needs.">
+    <meta name="keywords" content="logistics enquiry, shipping quote, cargo services, storage solutions, transportation services">
+    <meta name="author" content="Nare Logistics">
+    <title>Enquiry Form | Nare Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="preload" href="javascript/script.js" as="script">
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
 </head>
 <body>
- 
-
     <div class="navbar">
         <div class="logo">
-          <img src="Images/logistics-3125136_640.jpg" alt="Nare Logistics Logo">
+            <img src="Images/logistics-3125136_640.jpg" alt="Nare Logistics Logo" width="150" height="50">
         </div>
+        <button class="mobile-menu-button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
         <nav>
-          <a href="index.html">Home</a>
-          <a href="aboutus.html">About Us</a>
-          <a href="contactus.html">Contact Us</a>
-          <a href="services.html">Services</a>
-          <a href="enquiry.html">Enquiry</a>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+            <a href="contactus.html"><i class="fas fa-envelope"></i> Contact Us</a>
+            <a href="services.html"><i class="fas fa-truck"></i> Services</a>
+            <a href="enquiry.html" aria-current="page"><i class="fas fa-question-circle"></i> Enquiry</a>
         </nav>
-      </div>
-      
-
-     <div class="container">
-        <h2>Logistics Enquiry Form</h2>
-        <form action="/submit_enquiry" method="post">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email Address:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone">
-
-            <label for="service">Type of Service:</label>
-            <select id="service" name="service" required>
-                <option value="">Select Service</option>
-                <option value="shipment">Cargo</option>
-                <option value="storage">Storage</option>
-                <option value="delivery">Delivery</option>
-                <option value="consultation">Transportation</option>
-            </select>
-
-            <label for="message">Message/Details:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit" class="button">Submit Enquiry</button>
-        </form>
     </div>
+
+    <div class="form-container fade-in">
+        <div class="form-header">
+            <h1>Logistics Enquiry Form</h1>
+            <p>Fill out the form below and our team will get back to you within 24 hours</p>
+        </div>
+        
+        <form id="enquiry-form" action="/submit_enquiry" method="post" novalidate>
+            <div class="form-group">
+                <label for="name">Full Name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                <div class="error-message" id="phone-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="service">Type of Service: <span class="required">*</span></label>
+                <select id="service" name="service" required>
+                    <option value="">Select Service</option>
+                    <option value="shipment">Cargo Shipping</option>
+                    <option value="storage">Warehouse Storage</option>
+                    <option value="delivery">Express Delivery</option>
+                    <option value="consultation">Transportation Consultation</option>
+                    <option value="other">Other Services</option>
+                </select>
+                <div class="error-message" id="service-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="urgency">Urgency Level:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="urgency" value="standard" checked> Standard (3-5 days)</label>
+                    <label><input type="radio" name="urgency" value="express"> Express (1-2 days)</label>
+                    <label><input type="radio" name="urgency" value="urgent"> Urgent (Same day)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message/Details: <span class="required">*</span></label>
+                <textarea id="message" name="message" required placeholder="Please provide details about your logistics needs"></textarea>
+                <div class="error-message" id="message-error"></div>
+                <div class="char-counter">0/500</div>
+            </div>
+
+            <div class="form-group">
+                <label for="preferred-contact">Preferred Contact Method:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="preferred-contact" value="email" checked> Email</label>
+                    <label><input type="checkbox" name="preferred-contact" value="phone"> Phone</label>
+                    <label><input type="checkbox" name="preferred-contact" value="whatsapp"> WhatsApp</label>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Submit Enquiry</button>
+                <button type="reset" class="reset-btn">Reset Form</button>
+            </div>
+        </form>
+
+        <div id="success-message" class="success-message">
+            <i class="fas fa-check-circle"></i>
+            <h3>Thank you for your enquiry!</h3>
+            <p>We've received your request and will contact you shortly.</p>
+            <button class="close-success">OK</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="services.html#air-freight">Air Freight</a></li>
+                    <li><a href="services.html#sea-freight">Sea Freight</a></li>
+                    <li><a href="services.html#ground-transport">Ground Transport</a></li>
+                    <li><a href="services.html#warehousing">Warehousing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Logistics Park, Johannesburg</p>
+                <p><i class="fas fa-phone"></i> 071 905 1805</p>
+                <p><i class="fas fa-envelope"></i> info@narelogistics.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Nare Logistics. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com/narelogistics" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/narelogistics" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/narelogistics" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/narelogistics" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="javascript/script.js" defer></script>
 </body>
 </html>
